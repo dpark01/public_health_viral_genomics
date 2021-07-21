@@ -32,7 +32,8 @@ task bedtools_cov {
     memory:       "2 GB"
     cpu:          1
     disks:        "local-disk 100 SSD"
-    preemptible:  0      
+    preemptible:  0
+    maxRetries:   3
   }
 }
 
