@@ -71,6 +71,6 @@ task bedtools_multicov {
     cpu:          1
     disks:        "local-disk 100 SSD"
     preemptible:  0
-    maxRetries: 3
+    maxRetries:   3
   }
 }
