@@ -16,6 +16,7 @@ task md5sum {
     cpu: 1
     disks: "local-disk 100 HDD"
     dx_instance_type: "mem1_ssd2_v2_x2"
+    maxRetries:   3
   }
 }
 
@@ -47,6 +48,7 @@ task download_fasta {
     memory: "7 GB"
     cpu: 2
     dx_instance_type: "mem2_ssd1_v2_x2"
+    maxRetries:   3
   }
 }
 
@@ -87,6 +89,7 @@ task download_annotations {
     memory: "7 GB"
     cpu: 2
     dx_instance_type: "mem2_ssd1_v2_x2"
+    maxRetries:   3
   }
 }
 
@@ -140,6 +143,7 @@ task annot_transfer {
     memory: "3 GB"
     cpu: 2
     dx_instance_type: "mem1_ssd1_v2_x2"
+    maxRetries:   3
   }
 }
 
@@ -196,6 +200,7 @@ task align_and_annot_transfer_single {
     cpu: 4
     dx_instance_type: "mem2_ssd1_v2_x4"
     preemptible: 1
+    maxRetries:   3
   }
 }
 
@@ -245,6 +250,7 @@ task structured_comments {
     memory: "1 GB"
     cpu: 1
     dx_instance_type: "mem1_ssd1_v2_x2"
+    maxRetries:   3
   }
 }
 
@@ -273,6 +279,7 @@ task prefix_fasta_header {
     memory: "1 GB"
     cpu: 1
     dx_instance_type: "mem1_ssd1_v2_x2"
+    maxRetries:   3
   }
 }
 
@@ -298,6 +305,7 @@ task rename_fasta_header {
     memory: "1 GB"
     cpu: 1
     dx_instance_type: "mem1_ssd1_v2_x2"
+    maxRetries:   3
   }
 }
 
@@ -381,6 +389,7 @@ task gisaid_meta_prep {
     memory: "1 GB"
     cpu: 1
     dx_instance_type: "mem1_ssd1_v2_x2"
+    maxRetries:   3
   }
 }
 
@@ -404,6 +413,7 @@ task lookup_table_by_filename {
     memory: "1 GB"
     cpu: 1
     dx_instance_type: "mem1_ssd1_v2_x2"
+    maxRetries:   3
   }
 }
 
@@ -530,6 +540,7 @@ task sra_meta_prep {
     cpu: 1
     disks: "local-disk 100 HDD"
     dx_instance_type: "mem1_ssd1_v2_x2"
+    maxRetries:   3
   }
 }
 
@@ -574,6 +585,7 @@ task biosample_to_genbank {
     memory: "1 GB"
     cpu: 1
     dx_instance_type: "mem1_ssd1_v2_x2"
+    maxRetries:   3
   }
 }
 
@@ -711,6 +723,7 @@ task prepare_genbank {
     memory: select_first([machine_mem_gb, 3]) + " GB"
     cpu: 2
     dx_instance_type: "mem1_ssd1_v2_x2"
+    maxRetries:   3
   }
 }
 
@@ -780,6 +793,7 @@ task package_genbank_ftp_submission {
     memory: "1 GB"
     cpu: 1
     dx_instance_type: "mem1_ssd1_v2_x2"
+    maxRetries:   3
   }
 }
 
@@ -842,5 +856,6 @@ task vadr {
     memory: "2 GB"
     cpu: 1
     dx_instance_type: "mem1_ssd1_v2_x2"
+    maxRetries:   3
   }
 }
