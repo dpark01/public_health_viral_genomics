@@ -2,11 +2,11 @@ version 1.0
 
 task kraken2 {
   input {
-  	File        read1
-	  File? 		  read2
-	  String      samplename
-	  String?     kraken2_db = "/kraken2-db"
-    Int?        cpus=4
+  	File	read1
+	File?	read2
+	String	samplename
+	String?	kraken2_db = "/kraken2-db"
+    	Int?	cpus=4
   }
 
   command{
